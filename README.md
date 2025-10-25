@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+🚀 Node Pipeline Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack pipeline builder with a React frontend and FastAPI backend, featuring dynamic node creation, real-time validation, and DAG analysis.
 
-## Available Scripts
+✨ Key Features
+🎨 Frontend
 
-In the project directory, you can run:
+Node System – Create nodes with minimal code
 
-### `npm start`
+Enhanced Text Node – Variable detection ({{variable}}), auto-resize, live validation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+9 Node Types – Input, Output, LLM, Text, Math, Filter, Transform, Delay, Validator
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Modern UI – Responsive design, styled-components, animations
 
-### `npm test`
+🔧 Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+FastAPI REST APIs with Pydantic validation
 
-### `npm run build`
+DAG Detection using Kahn’s algorithm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pipeline Analysis – Node/edge count, cycle detection
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+CORS enabled for frontend integration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+⚙️ Setup
+Prerequisites
 
-### `npm run eject`
+Node.js 16+
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Python 3.8+
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Frontend
+cd frontend
+npm install
+npm start   # http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend
+cd backend
+pip install -r requirements.txt
+python run.py   # http://localhost:8000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Test DAG:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+python test_dag.py
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🧠 Usage
 
-### Code Splitting
+Add & Connect Nodes from toolbar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Edit Properties and use variables like {{var}}
 
-### Analyzing the Bundle Size
+Submit Pipeline for DAG validation and results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🏗️ Architecture
 
-### Making a Progressive Web App
+React + FastAPI full-stack structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Node Abstraction → Add new node types in a few lines
 
-### Advanced Configuration
+Type Safety → Pydantic models
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Docs Available → Documentation/ folder
 
-### Deployment
+🔮 Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Pipeline execution & templates
 
-### `npm run build` fails to minify
+Collaboration & versioning
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Database storage & WebSockets
+
+Authentication & deployment setup
+
+🛡️ Security
+
+Pydantic input validation
+
+Restricted CORS (localhost)
+
+Safe error handling
